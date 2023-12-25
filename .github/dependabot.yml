@@ -1,0 +1,52 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+CodeQL treats code like data, allowing you to find potential vulnerabilities in your code with greater confidence than traditional static analyzers.
+
+You generate a CodeQL database to represent your codebase.
+Then you run CodeQL queries on that database to identify problems in the codebase.
+The query results are shown as code scanning alerts in GitHub when you use CodeQL with code scanning.
+CodeQL supports both compiled and interpreted languages, and can find vulnerabilities and errors in code that's written in the supported languages.
+
+C/C++
+C#
+Go
+Java/Kotlin
+JavaScript/TypeScript
+Python
+Ruby
+Swift
+Notes:
+
+CodeQL analysis for Swift is currently in beta. During the beta, analysis of Swift will be less comprehensive than CodeQL analysis of other languages. Additionally, Swift 5.8 is not yet supported.
+
+CodeQL analysis for Kotlin is currently in beta. During the beta, analysis of Kotlin will be less comprehensive than CodeQL analysis of other languages.
+
+Use java-kotlin to analyze code written in Java, Kotlin or both.
+
+Use javascript-typescript to analyze code written in JavaScript, TypeScript or both.
+
+For more information, see the documentation on the CodeQL website: "Supported languages and frameworks."
+
+About CodeQL queries
+GitHub experts, security researchers, and community contributors write and maintain the default CodeQL queries used for code scanning. The queries are regularly updated to improve analysis and reduce any false positive results. The queries are open source, so you can view and contribute to the queries in the github/codeql repository. For more information, see CodeQL on the CodeQL website. You can also write your own queries. For more information, see "About CodeQL queries" in the CodeQL documentation.
+
+If you are scanning your code with advanced setup or an external CI system, you can run additional queries as part of your analysis. These queries must belong to a published CodeQL query pack (beta) or a CodeQL pack in a repository. CodeQL packs (beta) provide the following benefits over traditional QL packs:
+
+When a CodeQL query pack (beta) is published to the GitHub Container registry, all the transitive dependencies required by the queries and a compilation cache are included in the package. This improves performance and ensures that running the queries in the pack gives identical results every time until you upgrade to a new version of the pack or the CLI.
+QL packs do not include transitive dependencies, so queries in the pack can depend only on the standard libraries (that is, the libraries referenced by an import LANGUAGE statement in your query), or libraries in the same QL pack as the query.
+CodeQL query packs (beta) can be downloaded from multiple GitHub container registries. For more information, see "Customizing your advanced setup for code scanning."
+For more information, see "Customizing analysis with CodeQL packs."
+
+Note: The CodeQL package management functionality, including CodeQL packs, is currently in beta and subject to change.
+
+Press alt+up to activate
+Help and support
